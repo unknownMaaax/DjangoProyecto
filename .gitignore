@@ -1,0 +1,3 @@
+#omitir dependencias
+venv/
+.vscode/

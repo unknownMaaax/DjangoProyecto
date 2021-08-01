@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block content%}
+    <h1>Bienvenidos al sistema de turismo</h1>
+    <br>
+    <br>
+    {% if not  user.is_autenticated %}
+        <p>Para acceder al sistema debes ingresar tu usuario y clave o registrarte. </p>
+    {% endif %}
+    {% endblock%}
+
+
+</body>
+</html>
+
+<!-- 
+{% if user.is_authenticated %}
+        <h2>Bienvenido {{user.username}}</h2>
+        <a href="/tours">Listado de Tours</a>
+        <p><a href="{%url 'logout' }"></a></p>
+    {% else%}
+        <p>Para acceder al sistema debes autenticarte</p>
+        <a href="{%url 'login' %}">login</a>
+        <p>Si no tienes un usuario puedes registrarte</p>
+        <a href="{% url 'signup' %}">signup</a>
+    {% endif %}
+-->
